@@ -9,13 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var Patient = (function () {
+    function Patient() {
+    }
+    return Patient;
+}());
+exports.Patient = Patient;
+//<input [(ngModel)]="patient.nickName" placeholder="name">
+//      <input [(ngModel)]="hero.passWord" placeholder="pass">
 var AppComponent = (function () {
     function AppComponent() {
+        this.title = 'Insulin Monitor';
+        this.patient = {};
     }
     AppComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: '<h1>Hello Angular!</h1>'
+            selector: 'my-login',
+            template: "\n    <h1>{{title}}</h1>\n    <h2> Login </h2>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"patient.nickName\" placeholder=\"User\u00B4s nickName\">\n    </div>\n    <div>\n      <label>pass: </label>\n      <input type=\"password\" [(ngModel)]=\"patient.passWord\" placeholder=\"User\u00B4s password\">\n    </div>\n    <div>\n        <button>Login</button>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
